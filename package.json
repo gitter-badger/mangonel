@@ -2,7 +2,7 @@
   "name": "romulan",
   "version": "0.0.1",
   "description": "Game Launchere",
-  "main": "main.js",
+  "main": "romulan.js",
   "author": "Simon W. Jackson",
   "dependencies": {
     "bluebird": "^3.1.1",

@@ -1,4 +1,4 @@
-romulan = require('./main').romulan;
+romulan = require('./romulan');
 
 // var settings = {
 //     launcher: {
