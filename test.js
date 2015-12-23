@@ -1,15 +1,22 @@
 romulan = require('./main').romulan;
 
+// var settings = {
+//     launcher: {
+//         name: "snes9x",
+//         path: "path/to/emu.exe",
+//     },
+//     app: "/path/to/roms.smc"
+// }
+
 var settings = {
     launcher: {
         name: "snes9x",
-        path: "path/to/emu.exe",
+        path: "/usr/bin/snes9x",
     },
-    app: "/path/to/roms.smc"
+    app: "/media/storage/bowser/games/binaries/snes/super-mario-world-2-yoshis-island.sfc"
 }
 
-romulan(settings)
-.then(function(res) {
+romulan(settings).then(function(res) {
     console.log(res);
 })
 .catch(function(err) {

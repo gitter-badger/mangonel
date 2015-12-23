@@ -30,8 +30,23 @@ exports.romulan = function(obj) {
           throw "Missing information";
       }
 
-      cp.exec('start ' + settings.launcher.path + ' ' + settings.app);
+      command = buildCommand(settings);
+      cp.exec(command);
 
       return Promise.resolve(cp);
   });
 };
+
+function buildCommand(settings) {
+      var command = settings.launcher.path + ' ' + settings.app;
+
+      if (process.platform == "linux") {
+
+      }
+
+      else if (process.platform == "windows") {
+          command = 'start ' + command;
+      }
+
+      return command;
+}
