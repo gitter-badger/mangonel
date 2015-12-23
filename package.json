@@ -1,0 +1,13 @@
+{
+  "name": "romulan",
+  "version": "0.0.1",
+  "description": "Game Launchere",
+  "main": "main.js",
+  "author": "Simon W. Jackson",
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "cheerio": "latest",
+    "lodash": "^3.10.1",
+    "request": "latest"
+  }
+}

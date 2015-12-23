@@ -1,0 +1,16 @@
+{
+  "launcher": {
+    "name": null,
+    "version": null,
+    "path": null
+  },
+  "app": null,
+  "options" : {
+    "fullscreen": false,
+    "sound": true,
+    "resolution": {
+      "width": null,
+      "height": null
+    }
+  }
+}
