@@ -16,8 +16,8 @@ var settings = {
     app: "/media/storage/bowser/games/binaries/snes/super-mario-world-2-yoshis-island.sfc"
 }
 
-romulan(settings).then(function(res) {
-    console.log(res);
+romulan(settings).then(function(childProcess) {
+    // console.log(res);
 })
 .catch(function(err) {
     console.log(err.message);

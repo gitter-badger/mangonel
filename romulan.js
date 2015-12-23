@@ -8,7 +8,7 @@ var romulanDefaults = {
   'filename': "defaults.json"
 };
 
-exports = function(obj) {
+module.exports = function(obj) {
   return fs.readFileAsync(romulanDefaults['filename']).then(function(content) {
     romulanDefaults['content'] = content;
     return Promise.resolve(content);
