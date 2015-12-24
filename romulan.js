@@ -30,7 +30,7 @@ module.exports = function(obj) {
 };
 
 function buildCommand(settings) {
-    var command = settings.launcher.path + ' "' + settings.app + '"';
+    var command = settings.launcher.path;
 
     if (process.platform == "linux") {
 
@@ -44,7 +44,7 @@ function buildCommand(settings) {
         //command += ' --fullscreen';
     }
 
-    command += ' ' + settings.app;
+    command += ' '  + ' "' + settings.app + '"';
 
     return command;
 }

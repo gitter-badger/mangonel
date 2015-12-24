@@ -10,10 +10,10 @@ romulan = require('./romulan');
 
 var settings = {
     launcher: {
-        name: "fceux",
-        path: "/usr/bin/fceux",
+        name: "snes9x",
+        path: "D:\\games\\emulators\\snes9x-1.53-win32\\snes9x.exe",
     },
-    app: "/media/storage/bowser/games/binaries/nes/duck-tales-2.nes",
+    app: "D:\\games\\binaries\\snes\\Super Mario World.smc",
     options: {
         fullscreen: true,
     }
