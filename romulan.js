@@ -21,30 +21,17 @@ module.exports = function(obj) {
           throw "Missing information";
         }
 
-        command = buildCommand(settings);
-        console.log(settings, command);
-        cp.exec(command);
+        launcher = require('./launchers/' + settings.launcher.name);
+        command = launcher(settings.app, settings.options)
 
-        return resolve(cp);
+        // command = buildCommand(settings);
+        // console.log(settings, command);
+        // cp.exec(command);
+
+        // return resolve(cp);
+        return resolve(command);
+    })
+    .catch(function(err) {
+        console.log(err.message);
     });
 };
-
-function buildCommand(settings) {
-    var command = settings.launcher.path;
-
-    if (process.platform == "linux") {
-
-    }
-
-    else if (process.platform == "windows") {
-      command = 'start ' + command;
-    }
-
-    if (settings.options.fullscreen) {
-        //command += ' --fullscreen';
-    }
-
-    command += ' '  + ' "' + settings.app + '"';
-
-    return command;
-}

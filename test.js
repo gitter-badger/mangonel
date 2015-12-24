@@ -19,8 +19,8 @@ var settings = {
     }
 }
 
-romulan(settings).then(function(childProcess) {
-    // console.log(res);
+romulan(settings).then(function(res) {
+    console.log(res);
 })
 .catch(function(err) {
     console.log(err.message);
