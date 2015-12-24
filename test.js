@@ -10,10 +10,13 @@ romulan = require('./romulan');
 
 var settings = {
     launcher: {
-        name: "snes9x",
-        path: "/usr/bin/snes9x",
+        name: "fceux",
+        path: "/usr/bin/fceux",
     },
-    app: "/media/storage/bowser/games/binaries/snes/super-mario-world-2-yoshis-island.sfc"
+    app: "/media/storage/bowser/games/binaries/nes/duck-tales-2.nes",
+    options: {
+        fullscreen: true,
+    }
 }
 
 romulan(settings).then(function(childProcess) {
