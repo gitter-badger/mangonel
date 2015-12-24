@@ -29,7 +29,7 @@ module.exports = function(obj) {
 };
 
 function buildCommand(settings) {
-    var command = settings.launcher.path + ' ' + settings.app;
+    var command = settings.launcher.path + ' "' + settings.app + '"';
 
     if (process.platform == "linux") {
 
