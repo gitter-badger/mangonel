@@ -22,6 +22,7 @@ module.exports = function(obj) {
         }
 
         command = buildCommand(settings);
+        console.log(settings, command);
         cp.exec(command);
 
         return resolve(cp);
@@ -38,6 +39,12 @@ function buildCommand(settings) {
     else if (process.platform == "windows") {
       command = 'start ' + command;
     }
+
+    if (settings.options.fullscreen) {
+        //command += ' --fullscreen';
+    }
+
+    command += ' ' + settings.app;
 
     return command;
 }
