@@ -5,12 +5,13 @@
     "path": null
   },
   "app": null,
-  "options" : {
-    "fullscreen": false,
-    "sound": true,
-    "resolution": {
-      "width": null,
-      "height": null
+  "options": {
+    "video": {
+      "scaling": "nearest",
+      "vsync": true,
+      "fullscreen": true,
+      "stretch": false,
+      "position": "center"
     }
   }
 }

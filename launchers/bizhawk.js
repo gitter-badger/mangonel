@@ -1,5 +1,5 @@
-module.exports = function(appPath, options) {
-    var command = settings.launcher.path;
+module.exports = function(settings) {
+    var command = wrapQuotes(settings.launcher.path);
 
     // if (process.platform == "linux") {
 
@@ -13,7 +13,11 @@ module.exports = function(appPath, options) {
         command += ' --fullscreen';
     }
 
-    command += ' '  + ' "' + settings.app + '"';
+    command += ' ' + wrapQuotes(settings.app);
 
     return command;
+}
+
+function wrapQuotes(str) {
+    return '"' + str + '"';
 }

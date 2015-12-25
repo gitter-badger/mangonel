@@ -11,7 +11,7 @@ var romulanDefaults = {
 module.exports = function(obj) {
     return new Promise(function(resolve, reject) {
         romulanDefaults['json'] = require(romulanDefaults['filename']);
-        settings = Object.assign(romulanDefaults['json'], obj);
+        settings = _.merge(romulanDefaults['json'], obj);
 
         var missing = _.isEmpty(settings.launcher.path) ||
               _.isEmpty(settings.launcher.name) ||
@@ -21,12 +21,16 @@ module.exports = function(obj) {
           throw "Missing information";
         }
 
+        console.log(romulanDefaults['json'], settings);
+
         launcher = require('./launchers/' + settings.launcher.name);
-        command = launcher(settings.app, settings.options)
+        command = launcher(settings);
 
         // command = buildCommand(settings);
         // console.log(settings, command);
-        // cp.exec(command);
+        cp.exec(command/*, {
+            cwd: 'D:\\games\\emulators\\snes9x-1.53-win32\\'
+        }*/);
 
         // return resolve(cp);
         return resolve(command);
