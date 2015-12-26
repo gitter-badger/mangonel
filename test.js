@@ -1,22 +1,22 @@
 var romulan = require('./romulan');
 
-var settings = {
-    launcher: {
-        name: "snes9x",
-        path: "D:\\games\\emulators\\snes9x-1.53-win32\\snes9x.exe",
-    },
-    app: "D:\\games\\binaries\\snes\\Super Mario World.smc",
-    options: {
-        "video": {
-            "vsync": true,
-            "fullscreen": true,
-            "resolution": {
-                "width": 1920,
-                "height": 1080
-            }
-        }
-    }
-}
+// var settings = {
+//     launcher: {
+//         name: "snes9x",
+//         path: "D:\\games\\emulators\\snes9x-1.53-win32\\snes9x.exe",
+//     },
+//     app: "D:\\games\\binaries\\snes\\Super Mario World.smc",
+//     options: {
+//         "video": {
+//             "vsync": true,
+//             "fullscreen": true,
+//             "resolution": {
+//                 "width": 1920,
+//                 "height": 1080
+//             }
+//         }
+//     }
+// }
 
 // var settings = {
 //     launcher: {
@@ -46,6 +46,14 @@ var settings = {
 //         }
 //     }
 // }
+
+var settings = {
+    "launcher": {
+        "name": "steam-win",
+        "path": "C:\\Program Files (x86)\\Steam\\Steam.exe",
+    },
+    "app": "steam://rungameid/293300"
+}
 
 romulan(settings).then(function(res) {
     console.log(res);

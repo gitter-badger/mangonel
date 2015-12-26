@@ -9,7 +9,7 @@ module.exports = function(settings) {
       command = 'start ' + command;
     }
 
-    if (settings.options.fullscreen) {
+    if (settings.options.video.fullscreen) {
         command += ' --fullscreen';
     }
 
