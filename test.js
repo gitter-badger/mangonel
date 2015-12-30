@@ -1,4 +1,4 @@
-var romulan = require('./romulan');
+var mangonel = require('./index');
 
 // var settings = {
 //     launcher: {
@@ -97,7 +97,7 @@ var settings = {
 //     "app": "steam://rungameid/293300"
 // }
 
-romulan(settings).then(function(res) {
+mangonel(settings).then(function(res) {
     console.log(res);
 })
 .catch(function(err) {

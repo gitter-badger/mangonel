@@ -1,2 +1,2 @@
-# romulan
+# mangonel
 Multi emulator launcher

@@ -1,14 +1,14 @@
 {
-  "name": "romulan",
+  "name": "mangonel",
   "version": "0.0.1",
-  "description": "Game Launchere",
-  "main": "romulan.js",
+  "description": "Game Launcher",
+  "main": "index.js",
   "author": "Simon W. Jackson",
   "dependencies": {
-    "bluebird": "^3.1.1",
+    "bluebird": "latest",
     "cheerio": "latest",
-    "ini": "^1.3.4",
-    "lodash": "^3.10.1",
+    "ini": "latest",
+    "lodash": "latest",
     "request": "latest"
   }
 }
